@@ -1,1 +1,14 @@
-<p>list-user works!</p>
+
+<ng-container  *ngIf="userList" >
+<div *ngIf="userRole ; else notuser">
+<p  >list-user works!</p>
+</div>
+<ng-template #notuser>
+  is not user
+</ng-template>
+<ng-template *ngIf="hello">
+
+ff
+</ng-template>
+</ng-container>
+

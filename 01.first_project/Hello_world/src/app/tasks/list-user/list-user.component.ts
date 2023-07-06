@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
-export class ListUserComponent {
-
+export class ListUserComponent  {
+  userRole: boolean = false ;
+  userList: boolean = false ;
+  hello: boolean = true ;
 }
