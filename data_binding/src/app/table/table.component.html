@@ -1,6 +1,8 @@
-<input [(ngModel)]="name">
-<button (click)="addContact(name)" mat-raised-button color="primary" >add </button>
-<!-- <h1>{{name}} </h1> -->
+name <input [(ngModel)]="name"><br>
+email <input [(ngModel)]="email"><br>
+<button (click)="addContact(name,email)" mat-raised-button color="primary" >add </button>
+<!-- <h1 #showname>{{name}} </h1> -->
+<h1 *ngIf="name == 'hicham'">{{name}} </h1>
 
 <div *ngFor="let value of data">
          <mat-card>

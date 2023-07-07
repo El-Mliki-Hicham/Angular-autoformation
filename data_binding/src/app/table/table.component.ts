@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
   export class TableComponent {
     name = '';
+    email = '';
   data =[
     {"id":1 , "name": "hicham","email":"hicham@gmail.com"},
     {"id":2 , "name": "yahya","email":"yahya@gmail.com"},
@@ -25,11 +26,12 @@ import { Component } from '@angular/core';
      this.data.splice(index,1)
   }
 
-  addContact(name:string){
-    console.log(name)
+  addContact(name:string,email:string){
+    console.log(name,email)
      var id = this.data.length +1
-    this.data.push({"id":id,"name":name, "email": name+"@gmail.com"})
+    this.data.push({"id":id,"name":name, "email": email})
    this.name = " ";
+   this.email=" ";
   }
 
   }
