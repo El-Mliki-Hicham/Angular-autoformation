@@ -1,0 +1,16 @@
+<input [(ngModel)]="name">
+<button (click)="addContact(name)" mat-raised-button color="primary" >add </button>
+<!-- <h1>{{name}} </h1> -->
+
+<div *ngFor="let value of data">
+         <mat-card>
+          <mat-card-content>{{value.id}}   ||   {{value.name}}   ||   {{value.email}}
+
+            <button mat-raised-button color="warn" (click)="showName(value.id)">delete</button>
+          </mat-card-content>
+
+        </mat-card><br>
+</div>
+
+
+
