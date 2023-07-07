@@ -1,0 +1,23 @@
+<p>body works!</p>
+<ng-content></ng-content>
+<p>----------------in role-----------------</p>
+<ng-content select="[role]"></ng-content>
+<p>-------------------------------------------------</p>
+
+
+<p>----------------this is admin template-----------------</p>
+<div  *ngIf="AdminTemplate" >
+ <!-- Render the AdminTemplate -->
+  <template [ngTemplateOutlet]="AdminTemplate"></template>
+
+</div>
+<p>-------------------------------------------------</p>
+
+
+<p>----viewChild --------</p>
+<p  #btnChold class="btn btn-danger">hello im btn </p><br>
+<p #testChild>hello </p>
+{{testChild}}
+<p>-------------------------------------------------</p>
+
+
