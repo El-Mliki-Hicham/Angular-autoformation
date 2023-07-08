@@ -1,0 +1,6 @@
+<button mat-button (click)="goToLogin()">Login</button>
+<button mat-button color="primary" (click)="goToRegister()">Register</button>
+
+<app-login *ngIf="loginStatus"></app-login>
+<app-register *ngIf="registerStatus"></app-register>
+

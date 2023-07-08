@@ -12,12 +12,9 @@ email <input [(ngModel)]="email"><br>
          <mat-card>
           <mat-card-content>{{value.id}}   ||   {{value.name}}   ||   {{value.email}}
 
-            <button mat-raised-button color="warn" (click)="showName(value.id)">delete</button>
+            <button mat-raised-button color="warn"  (click)="showName(value.id)">delete</button>
             <button mat-raised-button color="indigo"  (click)="edit(value.id)">edit</button>
           </mat-card-content>
 
         </mat-card><br>
 </div>
-
-
-
