@@ -1,14 +1,19 @@
 name <input [(ngModel)]="name"><br>
 email <input [(ngModel)]="email"><br>
-<button (click)="addContact(name,email)" mat-raised-button color="primary" >add </button>
-<!-- <h1 #showname>{{name}} </h1> -->
-<h1 *ngIf="name == 'hicham'">{{name}} </h1>
+<input type="hidden" [(ngModel)]="id"><br>
+
+
+<button (click)="addContact(name,email)" *ngIf="btnAdd" mat-raised-button color="primary" >add </button>
+<button (click)="updateContact(name,email,id)"  *ngIf="btnUpdate"  mat-raised-button color="accent" >update </button>
+<button (click)="Annuler()"  *ngIf="btnAnnuler"  mat-raised-button color="warn" >x </button>
+
 
 <div *ngFor="let value of data">
          <mat-card>
           <mat-card-content>{{value.id}}   ||   {{value.name}}   ||   {{value.email}}
 
             <button mat-raised-button color="warn" (click)="showName(value.id)">delete</button>
+            <button mat-raised-button color="indigo"  (click)="edit(value.id)">edit</button>
           </mat-card-content>
 
         </mat-card><br>

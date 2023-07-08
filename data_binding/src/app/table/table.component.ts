@@ -6,8 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
   export class TableComponent {
+
+    btnUpdate:boolean  = false ;
+    btnAdd:boolean  = true ;
+    btnAnnuler:boolean  = false ;
     name = '';
     email = '';
+    id = 0;
+
+
   data =[
     {"id":1 , "name": "hicham","email":"hicham@gmail.com"},
     {"id":2 , "name": "yahya","email":"yahya@gmail.com"},
@@ -22,16 +29,48 @@ import { Component } from '@angular/core';
   size = "20px";
   showName(id : number){
     var index = this.data.findIndex(item => item.id === id)
-    console.log(index)
-     this.data.splice(index,1)
+    this.data.splice(index,1)
   }
 
   addContact(name:string,email:string){
     console.log(name,email)
-     var id = this.data.length +1
+    var id = this.data.length +2
     this.data.push({"id":id,"name":name, "email": email})
-   this.name = " ";
-   this.email=" ";
+    this.name = " ";
+    this.email=" ";
   }
 
+  edit(id:number ) {
+
+    var index = this.data.findIndex(item => item.id === id)
+    var dataEdit =  this.data[index]
+    this.name = dataEdit.name
+    this.email = dataEdit.email
+    this.id = dataEdit.id
+    this.btnUpdate = true
+    this.btnAdd = false
+    this.btnAnnuler = true ;
+
   }
+
+  Annuler(){
+    this.name = " "
+    this.email = " "
+    this.btnUpdate = false
+    this.btnAdd = true
+    this.btnAnnuler = false ;
+  }
+  updateContact(name: string,email: string,id:number) {
+    var index = this.data.findIndex(item=>item.id === id)
+    this.data[index].name = name
+    this.data[index].email = email
+
+    this.name = " "
+    this.email = " "
+    this.btnUpdate = false
+    this.btnAdd = true
+    this.btnAnnuler = false ;
+  }
+
+
+}
