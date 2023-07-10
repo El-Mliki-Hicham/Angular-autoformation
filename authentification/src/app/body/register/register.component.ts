@@ -31,6 +31,13 @@ const hello= {
 // this.form.setValue(hello)
  //for set just keys exist in the form
 this.form.patchValue(hello)
+
+
+//show status of  input // is valide or not valide
+this.form.get("emailControl")?.statusChanges.subscribe(data => {
+  console.log(data)
+})
+
 }
 
 
@@ -38,6 +45,14 @@ registerBtn(){
   //get FormControl
   console.log(this.form?.get('nameControl')?.value)
 }
+onChange( ){
+  this.form.valueChanges.subscribe(data =>{
+    console.log(data.nameControl)
+  })
+
+}
+
+
 
 
 

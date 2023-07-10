@@ -1,11 +1,12 @@
-<form [formGroup]="form" >
-<input  [formControlName]="nameControl"  type="text"  >
+<form [formGroup]="form" (keyup)="onChange()"  >
 
-<label [style.color]="'red'"  *ngIf="form!.get('nameControl')!.hasError('required') && form!.get('nameControl')!.touched">
+<input  [formControlName]="nameControl"  type="text"    >
+
+<label [style.color]="'red'"   *ngIf="form!.get('nameControl')!.hasError('required') && form!.get('nameControl')!.touched">
   Name is required</label>
 
 
-<input [formControlName]="emailControl"  type="text">
+<input [formControlName]="emailControl"  type="text"  >
 <label [style.color]="'red'"  *ngIf="form!.get('emailControl')!.hasError('required') && form!.get('emailControl')!.touched">email is required</label>
 <label [style.color]="'red'"  *ngIf="form!.get('emailControl')!.hasError('email') && form!.get('emailControl')!.touched">email not correct  </label>
 <button (click)="registerBtn()"  type="submit">register</button>
