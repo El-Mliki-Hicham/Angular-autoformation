@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule} from "@angular/common/http";
 import { FormComponent } from './form/form.component';
@@ -13,10 +12,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { UpdateFormComponent } from './update-form/update-form.component'
 
 const routes = [
-  {
-    path:'about/:name',
-    component:AboutComponent
-  },
+
   {
     path:"home",
     component:HomeComponent
@@ -38,7 +34,6 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     HomeComponent,
     FormComponent,
     ContactListComponent,

@@ -22,9 +22,6 @@ export class UpdateFormComponent {
 
   ngOnInit(){
 
-
-
-
     this.form = this.FormBuilder.group({
       "name" : new FormControl("",this.validation),
       "email" : new FormControl("",[

@@ -41,7 +41,7 @@ export class FormComponent {
 
        this.services.storeData(data).subscribe(value=>{
         console.log(value);
-        this.router.navigate(['/about/1'])
+        this.router.navigate([''])
 
        },(err)=>{
         console.log(err)

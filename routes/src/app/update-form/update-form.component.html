@@ -1,6 +1,6 @@
 <form [formGroup]="form" >
 
-  <input type="text"  formControlName="name"   >
+  <input type="text" formControlName="name"   >
   <label *ngIf="form?.get('name')?.hasError('required')&&form.get('name')?.touched" [style.color]="'red'" val  >it required</label>
   <input type="email" formControlName="email">
   <label *ngIf="form?.get('email')?.hasError('required')&&form.get('email')?.touched" [style.color]="'red'" >it required</label>
