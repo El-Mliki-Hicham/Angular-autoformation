@@ -6,7 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule} from "@angular/common/http"
+import { HttpClientModule} from "@angular/common/http";
+import { FormComponent } from './form/form.component';
+import {FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { ContactListComponent } from './contact-list/contact-list.component'
 
 const routes = [
   {
@@ -14,8 +17,16 @@ const routes = [
     component:AboutComponent
   },
   {
-    path:"",
+    path:"home",
     component:HomeComponent
+  },
+  {
+    path:"form",
+    component:FormComponent
+  },
+  {
+    path:"",
+    component:ContactListComponent
   }
 ]
 
@@ -23,13 +34,16 @@ const routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent,
+    ContactListComponent
   ],
   imports: [
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
-    AppRoutingModule
+    AppRoutingModule,FormsModule
   ],
   exports:[RouterModule],
   providers: [],

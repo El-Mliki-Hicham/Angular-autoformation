@@ -21,6 +21,7 @@ export class AboutComponent {
 
  this.services.getData().subscribe(value=>{
   this.listData = value
+  console.log(value)
  },(err)=>{
   console.log("unable to get data from URL" +err)
  }
