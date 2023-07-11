@@ -2,7 +2,7 @@ name <input [(ngModel)]="name"><br>
 email <input [(ngModel)]="email"><br>
 <input type="hidden" [(ngModel)]="id"><br>
 
-
+{{name}}
 <button (click)="addContact(name,email)" *ngIf="btnAdd" mat-raised-button color="primary" >add </button>
 <button (click)="updateContact(name,email,id)"  *ngIf="btnUpdate"  mat-raised-button color="accent" >update </button>
 <button (click)="Annuler()"  *ngIf="btnAnnuler"  mat-raised-button color="warn" >x </button>
