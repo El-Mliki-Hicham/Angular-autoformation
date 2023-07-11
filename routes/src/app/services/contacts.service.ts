@@ -28,4 +28,20 @@ export class ContactsService {
    return  this.httpClient.post('http://localhost:3000/users',body)
   }
 
+  DeleteRow(id:number){
+
+   return  this.httpClient.delete('http://localhost:3000/users/'+id)
+  }
+
+  GetDataById(id:any):Observable<User>{
+
+   return  this.httpClient.get<User>('http://localhost:3000/users/'+id)
+  }
+
+  Update(id:any, value:any){
+    return this.httpClient.put('http://localhost:3000/users/'+id,value)
+  }
+
+
 }
+

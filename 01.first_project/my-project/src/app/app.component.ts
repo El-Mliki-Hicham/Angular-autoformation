@@ -19,8 +19,8 @@ export class AppComponent {
   @ViewChild(BodyComponent)
   bodyComponent? : BodyComponent;
 
-  @ViewChildren(BodyComponent)
-  HeaderComponent?: QueryList<BodyComponent>;
+  @ViewChildren(HeaderComponent)
+  HeaderComponent?: QueryList<HeaderComponent>;
 
 
   ngAfterViewInit():void{

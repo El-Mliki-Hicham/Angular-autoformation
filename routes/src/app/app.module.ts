@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule} from "@angular/common/http";
 import { FormComponent } from './form/form.component';
 import {FormsModule ,ReactiveFormsModule} from '@angular/forms';
-import { ContactListComponent } from './contact-list/contact-list.component'
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { UpdateFormComponent } from './update-form/update-form.component'
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
     component:FormComponent
   },
   {
+    path:"updateForm/:id",
+    component:UpdateFormComponent
+  },
+  {
     path:"",
     component:ContactListComponent
   }
@@ -36,7 +41,8 @@ const routes = [
     AboutComponent,
     HomeComponent,
     FormComponent,
-    ContactListComponent
+    ContactListComponent,
+    UpdateFormComponent
   ],
   imports: [
     HttpClientModule,

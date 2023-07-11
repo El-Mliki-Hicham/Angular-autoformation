@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContactsService } from '../services/contacts.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ContactsService } from '../services/contacts.service';
 export class ContactListComponent {
 
   contacts?:any;
-constructor(private Service:ContactsService ){}
+constructor(private Service:ContactsService,private route: Router ){}
 
 ngOnInit(){
   this.Service.getData().subscribe(value=>{
@@ -22,12 +23,20 @@ ngOnInit(){
 
 DeleteContact(id:number){
   console.log(id);
+  this.Service.DeleteRow(id).subscribe(value =>{
+    console.log(value)
+   this.ngOnInit()
+  },(err)=>{
+    console.log(err)
+  }
+  )
 
   // this.Service.DeleteRow(id)
 }
 EditContact(id:number){
-  console.log(id);
 
+  this.route.navigate(["updateForm/"+id])
+  console.log(id);
   // this.Service.DeleteRow(id)
 }
 
