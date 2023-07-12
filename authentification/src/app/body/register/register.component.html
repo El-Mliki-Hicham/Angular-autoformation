@@ -2,7 +2,8 @@
 
 <input  [formControlName]="nameControl"  type="text"    >
 
-<label [style.color]="'red'"   *ngIf="form!.get('nameControl')!.hasError('required') && form!.get('nameControl')!.touched">
+<label [style.color]="'red'"
+ *ngIf="form!.get('nameControl')!.hasError('required') && form!.get('nameControl')!.touched">
   Name is required</label>
 
 

@@ -11,26 +11,6 @@ import {FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { UpdateFormComponent } from './update-form/update-form.component'
 
-const routes = [
-
-  {
-    path:"home",
-    component:HomeComponent
-  },
-  {
-    path:"form",
-    component:FormComponent
-  },
-  {
-    path:"updateForm/:id",
-    component:UpdateFormComponent
-  },
-  {
-    path:"",
-    component:ContactListComponent
-  }
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +23,6 @@ const routes = [
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
-    RouterModule.forRoot(routes),
     AppRoutingModule,FormsModule
   ],
   exports:[RouterModule],

@@ -22,7 +22,8 @@ this.form = this.formBuilder.group({
    Validators.required,
    Validators.email
     ])
-})
+    , "email":new FormControl()
+  })
 const hello= {
   //  'nameControl':"hello",
    'emailControl':"helloeamil"

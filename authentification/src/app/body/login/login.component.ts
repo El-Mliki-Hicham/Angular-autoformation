@@ -18,7 +18,7 @@ export class LoginComponent {
 
   }
   restForm(formValue : NgForm){
-      formValue.reset()
+      formValue.setValue({'email':'ddedddd',"password":"sss",'rememberMe':true})
   }
   hello(){
     alert("helo fofo ")
