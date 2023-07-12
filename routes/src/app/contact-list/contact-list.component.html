@@ -1,5 +1,7 @@
 <button [routerLink]="['form']" routerLinkActive="router-link-active"  >Ajouter</button>
 
+<input type="text" [(ngModel)]="searsh" (keyup)="LiveSearsh()">
+
 <table class="table align-middle mb-0 bg-white">
   <thead class="bg-light">
     <tr>
@@ -12,7 +14,7 @@
   <tbody>
   <tbody>
 
-    <tr *ngFor=" let contact of contacts">
+    <tr *ngFor=" let contact of contacts | paginate: { itemsPerPage: 2, currentPage: paginate}">
       <td>
         <div class="d-flex align-items-center">
 
@@ -38,3 +40,4 @@
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="paginate = $event"></pagination-controls>

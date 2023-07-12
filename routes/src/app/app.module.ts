@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import {FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { UpdateFormComponent } from './update-form/update-form.component'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { UpdateFormComponent } from './update-form/update-form.component'
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,NgxPaginationModule
   ],
   exports:[RouterModule],
   providers: [],

@@ -8,7 +8,8 @@ import { ContactsService } from '../services/contacts.service';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent {
-
+  paginate: number = 1;
+  searsh = ""
   contacts?:any;
 constructor(private Service:ContactsService,private route: Router ){}
 
@@ -38,6 +39,13 @@ EditContact(id:number){
   this.route.navigate(["updateForm/"+id])
   console.log(id);
   // this.Service.DeleteRow(id)
+}
+
+LiveSearsh(){
+  this.Service.Searsh(this.searsh).subscribe(value=>{
+    console.log(value)
+    this.contacts = value
+  })
 }
 
 }

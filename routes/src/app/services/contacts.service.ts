@@ -42,6 +42,12 @@ export class ContactsService {
     return this.httpClient.put('http://localhost:3000/users/'+id,value)
   }
 
+  Searsh(name:any):Observable<User>{
+  var params = new HttpParams().set("name_like",name)
+
+   return  this.httpClient.get<User>('http://localhost:3000/users/',{params:params})
+
+  }
 
 }
 
