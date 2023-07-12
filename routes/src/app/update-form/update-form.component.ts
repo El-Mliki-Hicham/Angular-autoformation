@@ -13,7 +13,7 @@ export class UpdateFormComponent {
   form!:FormGroup ;
   data?:any;
   IdGet?: number;
-
+  role = true
   constructor(private FormBuilder:FormBuilder , private route:Router,private service:ContactsService,private routeParams:ActivatedRoute){
 
   }
