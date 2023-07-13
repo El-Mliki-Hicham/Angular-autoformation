@@ -48,6 +48,16 @@ export class ContactsService {
    return  this.httpClient.get<User>('http://localhost:3000/users/',{params:params})
 
   }
+  Filtre(name:any):Observable<User>{
+    if (name == "") {
+      var params = new HttpParams().set("status_like",name)
+    }else{
+  var params = new HttpParams().set("status",name)
+}
+
+   return  this.httpClient.get<User>('http://localhost:3000/users/',{params:params})
+
+  }
 
 }
 
