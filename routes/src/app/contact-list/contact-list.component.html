@@ -24,7 +24,6 @@ searsh <input type="text" [(ngModel)]="searsh" (keyup)="LiveSearsh()">
     <tr *ngFor=" let contact of contacts | paginate: { itemsPerPage: 2, currentPage: paginate}">
       <td>
         <div class="d-flex align-items-center">
-
           <div class="ms-3">
             <p class="fw-bold mb-1"></p>
             <p class="text-muted mb-0">{{contact.name}}</p>

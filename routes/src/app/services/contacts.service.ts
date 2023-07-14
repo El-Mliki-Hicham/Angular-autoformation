@@ -19,33 +19,32 @@ export class ContactsService {
 
    const params = new HttpParams()
    .set('pagesNumber',15)
-    return this.httpClient.get<User>("http://localhost:3000/users",{headers:header,params:params})
+    return this.httpClient.get<User>("http://localhost:8000/users",{headers:header,params:params})
 
   }
 
   storeData(body:any){
-
-   return  this.httpClient.post('http://localhost:3000/users',body)
+   return  this.httpClient.post('http://localhost:8000/users',body)
   }
 
   DeleteRow(id:number){
 
-   return  this.httpClient.delete('http://localhost:3000/users/'+id)
+   return  this.httpClient.delete('http://localhost:8000/users/'+id)
   }
 
   GetDataById(id:any):Observable<User>{
 
-   return  this.httpClient.get<User>('http://localhost:3000/users/'+id)
+   return  this.httpClient.get<User>('http://localhost:8000/users/'+id)
   }
 
   Update(id:any, value:any){
-    return this.httpClient.put('http://localhost:3000/users/'+id,value)
+    return this.httpClient.put('http://localhost:8000/users/'+id,value)
   }
 
   Searsh(name:any):Observable<User>{
   var params = new HttpParams().set("name_like",name)
 
-   return  this.httpClient.get<User>('http://localhost:3000/users/',{params:params})
+   return  this.httpClient.get<User>('http://localhost:8000/users/',{params:params})
 
   }
   Filtre(name:any):Observable<User>{
@@ -55,7 +54,7 @@ export class ContactsService {
   var params = new HttpParams().set("status",name)
 }
 
-   return  this.httpClient.get<User>('http://localhost:3000/users/',{params:params})
+   return  this.httpClient.get<User>('http://localhost:8000/users/',{params:params})
 
   }
 

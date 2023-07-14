@@ -16,6 +16,7 @@ export class FormComponent {
   constructor(private FormBuilder : FormBuilder,private services : ContactsService,private router:Router){}
 
   ngOnInit(){
+    
     this.form = this.FormBuilder.group({
       "name" : new FormControl("",this.validation),
       "email" : new FormControl("",[

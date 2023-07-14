@@ -1,23 +1,28 @@
 {
   "users": [
     {
-      "name": "botainaaaa",
+      "name": "botainaaaahh",
       "email": "boa@eeeaaaa.com",
-      "status":"VALID",
       "id": 17
     },
     {
       "name": "hicham",
       "email": "hicham@gmail.com",
-      "status":"VALID",
+      "status": "VALID",
       "id": 19
     },
     {
       "name": "hicham",
       "email": "hicham@gmail.com",
       "password": "hicham",
-      "status":"INVALID",
+      "status": "INVALID",
       "id": 20
+    },
+    {
+      "name": "Omnis excepturi sit",
+      "email": "dugyr@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 21
     }
   ]
 }
